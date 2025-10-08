@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, ScrollView, RefreshControl } from 'react-native';
-import { useTransactions } from '../hooks/useTransaction';
-import TransactionForm from '../components/TransactionForm';
-import TransactionList from '../components/TransactionList';
+import { useTransactions } from '../../hooks/useTransaction';
+import TransactionForm from '../../components/TransactionForm';
+import TransactionList from '../../components/TransactionList';
 
 const TransactionScreen: React.FC = () => {
   const { transactions, loading, addTransaction, deleteTransaction, refreshTransactions } = useTransactions();

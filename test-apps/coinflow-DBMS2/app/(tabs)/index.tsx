@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, Text, ScrollView, RefreshControl } from 'react-native';
-import SummaryCard from '../components/SummaryCard';
-import TransactionList from '../components/TransactionList';
-import { useTransactions } from '../hooks/useTransaction';
+import SummaryCard from '../../components/SummaryCard';
+import TransactionList from '../../components/TransactionList';
+import { useTransactions } from '../../hooks/useTransaction';
 
 const HomeScreen: React.FC = () => {
   const { transactions, loading, deleteTransaction, refreshTransactions } = useTransactions();

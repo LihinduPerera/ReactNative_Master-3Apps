@@ -1,14 +1,9 @@
-import React from 'react';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Ionicons } from '@expo/vector-icons';
-import HomeScreen from '../screens/HomeScreen';
-import TransactionScreen from '../screens/TransactionScreen';
+import { Tabs } from "expo-router";
+import { Ionicons } from "@expo/vector-icons";
 
-const Tab = createBottomTabNavigator();
-
-const TabNavigator: React.FC = () => {
+export default function TabLayout() {
   return (
-    <Tab.Navigator
+    <Tabs
       screenOptions={{
         tabBarActiveTintColor: '#3B82F6',
         tabBarInactiveTintColor: '#9CA3AF',
@@ -21,26 +16,24 @@ const TabNavigator: React.FC = () => {
         },
       }}
     >
-      <Tab.Screen
-        name="Home"
-        component={HomeScreen}
+      <Tabs.Screen
+        name="index"
         options={{
+          title: 'Home',
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="home" size={size} color={color} />
           ),
         }}
       />
-      <Tab.Screen
-        name="Transactions"
-        component={TransactionScreen}
+      <Tabs.Screen
+        name="transactions"
         options={{
+          title: 'Transactions',
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="card" size={size} color={color} />
           ),
         }}
       />
-    </Tab.Navigator>
+    </Tabs>
   );
-};
-
-export default TabNavigator;
+}

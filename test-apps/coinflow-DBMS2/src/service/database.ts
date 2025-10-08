@@ -11,7 +11,7 @@ export interface Transaction {
 
 const db = SQLite.openDatabaseSync('finance.db');
 
-export const initdatabase = () => {
+export const initDatabase = () => {
     db.execSync(`
     CREATE TABLE IF NOT EXISTS transactions (
       id INTEGER PRIMARY KEY AUTOINCREMENT,

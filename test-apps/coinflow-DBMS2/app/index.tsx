@@ -1,9 +1,6 @@
-import { Text, View } from "react-native";
+import App from "@/src/app/App";
+
 
 export default function Index() {
-  return (
-      <View>
-        <Text className="text-green-500 text-lg">Welcome</Text>
-      </View>
-  );
+  return <App />;
 }

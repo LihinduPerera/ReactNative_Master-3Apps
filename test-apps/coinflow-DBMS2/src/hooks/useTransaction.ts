@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { addTransaction, deleteTransaction, getTransactions, Transaction } from "../service/database"
 
-export const useTransaction = () => {
+export const useTransactions = () => {
     const [transactions, setTransactions] = useState<Transaction[]>([]);
     const [loading, setLoading] = useState(true);
 
@@ -45,6 +45,6 @@ export const useTransaction = () => {
         loading,
         addTransaction: addNewTransaction,
         deleteTransaction: removeTransaction,
-        refreshTransaction: loadTransactions,
+        refreshTransactions: loadTransactions,
     };
 }
